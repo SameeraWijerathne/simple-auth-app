@@ -51,7 +51,6 @@ public class AuthHttpController {
             if (optSessionID.isPresent()) {
                 Cookie sessionCookie = optSessionID.get();
                 sessionCookie.setDomain(request.getServerName());
-                System.out.println(sessionCookie.getDomain());
             }
 
             session.setAttribute("username", userDTO.getUsername());
