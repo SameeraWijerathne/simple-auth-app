@@ -68,4 +68,18 @@ public class AuthHttpController {
             session.invalidate();
         }
     }
+
+    @GetMapping("/whoami")
+    public String getUserDetails(HttpServletRequest request) throws SQLException {
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            String username = session.getAttribute("username").toString();
+            PreparedStatement stm = connection.prepareStatement("SELECT full_name FROM user WHERE username=?");
+            stm.setString(1, username);
+            ResultSet rst = stm.executeQuery();
+            rst.next();
+            return "Currently Logged User: " + rst.getString("full_name");
+        }
+        return "Currently No Active User";
+    }
 }
