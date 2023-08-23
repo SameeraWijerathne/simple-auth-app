@@ -4,7 +4,7 @@ const frmLogin = $("#frm-login");
 const username = $("#username");
 const password = $("#password");
 
-frmLogin.on('click', (evt) => {
+frmLogin.on('submit', (evt) => {
     evt.preventDefault();
 
     const jqxhr = $.ajax(`${API_BASE_URL}/auth/login`, {
