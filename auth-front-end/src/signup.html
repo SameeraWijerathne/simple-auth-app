@@ -13,6 +13,30 @@
     <script type="module" src="js/signup.js"></script>
 </head>
 <body>
-
+    <h1 class="text-center p-2">Simple Auth App: Sign Up</h1>
+    <p class="text-center">Please enter your valid login credentials</p>
+    <form action="#" id="frm-login" class="border p-3 rounded" style="max-width: 400px; margin: auto">
+        <div>
+            <div class="text-center">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" class="form-control text-center" required pattern="^[A-Za-z ]+$" placeholder="Enter your full name">
+            </div>
+            <div class="text-center">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control text-center" required placeholder="Enter your username">
+            </div>
+            <div class="text-center my-2">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control text-center" required minlength="4" placeholder="Enter your password">
+            </div>
+            <div class="text-center mt-2">
+                <button class="btn btn-primary">Sign Up</button>
+                <p class="mt-2">
+                    Do you already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
