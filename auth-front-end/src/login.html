@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Auth App: Login</title>
+    <title>Simple Auth App: Login</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script defer src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -13,6 +13,26 @@
     <script type="module" src="js/login.js"></script>
 </head>
 <body>
-
+    <h1 class="text-center p-2">Simple Auth App: Log In</h1>
+    <p class="text-center">Please enter your valid login credentials</p>
+    <form action="#" id="frm-login" class="border p-3 rounded" style="max-width: 400px; margin: auto">
+        <div>
+            <div class="text-center">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control text-center" required placeholder="Enter your username">
+            </div>
+            <div class="text-center my-2">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control text-center" required minlength="4" placeholder="Enter your password">
+            </div>
+            <div class="text-center mt-2">
+                <button class="btn btn-primary">Log In</button>
+                <p class="mt-2">
+                    Do you want to create a new account?
+                    <a href="signup.html">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
