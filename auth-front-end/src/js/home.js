@@ -1,6 +1,7 @@
 import {API_BASE_URL, existLoggedUser} from "./main.js";
 
 const tbodyElm = $("#tbl-customers tbody");
+const logout = $("#logout");
 
 if (!existLoggedUser()) {
     location.replace("login.html");
@@ -31,3 +32,15 @@ if (!existLoggedUser()) {
         }
     });
 }
+
+logout.on('click', () => {
+    const jqxhr = $.ajax(`${API_BASE_URL}/auth/logout`, {
+        xhrFields: {
+            withCredentials: true
+        }
+    });
+    jqxhr.always(() => {
+        localStorage.removeItem("username");
+        location.replace('login.html');
+    });
+});
