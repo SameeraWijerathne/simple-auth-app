@@ -1,6 +1,10 @@
 {
   "name": "auth-front-end",
   "version": "1.0.0",
+  "scripts": {
+    "watch": "sass -w src/scss:src/css",
+    "start": "npx live-server"
+  },
   "dependencies": {
     "bootstrap": "^5.3.1",
     "jquery": "^3.7.0"
